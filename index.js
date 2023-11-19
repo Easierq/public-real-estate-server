@@ -35,7 +35,7 @@ app.use(
   cors({
     origin: [
       "https://soonest.vercel.app",
-      "https://soonest-test.vercel.app/",
+      "https://soonest-test.vercel.app",
       "http://localhost:3000",
       "http://localhost:3001",
     ],
