@@ -14,6 +14,7 @@ import feedbackRoutes from "./routes/feedbacks.js";
 import reportRoutes from "./routes/reports.js";
 import passwordResetRoutes from "./routes/passwordReset.js";
 import NewsletterRoutes from "./routes/newsletter.js";
+import OtpRoutes from "./routes/otp.js";
 
 const app = express();
 dotenv.config();
@@ -53,6 +54,7 @@ app.use("/api/feedbacks", feedbackRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/password-reset", passwordResetRoutes);
 app.use("/api/newsletter", NewsletterRoutes);
+app.use("/api/otp", OtpRoutes);
 
 // Error handler
 app.use((err, req, res, next) => {

@@ -1,4 +1,4 @@
-import Otp from "../models/Otp";
+import Otp from "../models/Otp.js";
 // Generate and Save OTP for a User
 // export const saveOTPInDatabase = async (userId, email, OTP) => {
 //   try {

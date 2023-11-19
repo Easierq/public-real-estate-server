@@ -1,10 +1,10 @@
 import otpGenerator from "otp-generator";
 import bcrypt from "bcryptjs";
 import Joi from "joi";
-import Otp from "../models/Otp";
-import User from "../models/User";
-import { sendOtp } from "../utils/sendOtp";
-import { deleteOTPFunction, verifyOTPFunction } from "../utils/otpFunc";
+import Otp from "../models/Otp.js";
+import User from "../models/User.js";
+import { sendOtp } from "../utils/sendOtp.js";
+import { deleteOTPFunction, verifyOTPFunction } from "../utils/otpFunc.js";
 
 // Generate OTP for password reset
 export const generateOTP = async (req, res) => {
