@@ -34,7 +34,8 @@ const connect = () => {
 app.use(
   cors({
     origin: [
-      "https://kwita-test.vercel.app",
+      "https://soonest.vercel.app",
+      "https://soonest-test.vercel.app/",
       "http://localhost:3000",
       "http://localhost:3001",
     ],
