@@ -41,10 +41,7 @@ export const generateOTP = async (req, res) => {
     let name = user.full_name;
 
     await sendOtp(req.body.email, "Reset Password Otp", OTP, name);
-    res.status(200).send({
-      message:
-        "We have sent a 4-digit OTP code to your email for password reset",
-    });
+    res.status(200).send({ message: "OTP sent to your email" });
   } catch (error) {
     res.status(500).send({ message: "Internal Server Error" });
   }
@@ -53,7 +50,7 @@ export const generateOTP = async (req, res) => {
 // Verify OTP and reset password
 export const verifyOTPAndResetPassword = async (req, res) => {
   try {
-    const { otp, password } = req.body;
+    const { otp, newPassword } = req.body;
     // Verify OTP from the database
     const email = await getEmailFromOTP(otp);
     const isOTPValid = await verifyOTPFunction(email, otp);
@@ -69,7 +66,7 @@ export const verifyOTPAndResetPassword = async (req, res) => {
     }
 
     const salt = bcrypt.genSaltSync(10);
-    const hashPassword = bcrypt.hashSync(password, salt);
+    const hashPassword = bcrypt.hashSync(newPassword, salt);
 
     user.password = hashPassword;
     user.confirm_password = hashPassword;
