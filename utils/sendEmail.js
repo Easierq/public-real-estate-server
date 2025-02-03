@@ -15,8 +15,8 @@ export const sendEmail = async (email, subject, text, name) => {
       }
       .header {
         margin-bottom: 30px;
-        background-color: #3b4144;
-        padding: 10px;
+        background-color: #0781f5;
+        padding: 18px 10px;
       }
       .title {
         color: white;
@@ -60,7 +60,7 @@ export const sendEmail = async (email, subject, text, name) => {
 
   <body>
     <div class="header">
-      <h1 class="title">Kwita</h1>
+      <h1 class="title">Soonest</h1>
     </div>
 
     <p class="name">Hi ${name}</p>
