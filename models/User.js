@@ -36,13 +36,13 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: false,
       maxlength: 15,
-      minlength: 4,
+      // minlength: 4,
     },
     whatsapp_number: {
       type: String,
       required: false,
       maxlength: 15,
-      minlength: 11,
+      // minlength: 11,
     },
     picture: {
       type: String,
